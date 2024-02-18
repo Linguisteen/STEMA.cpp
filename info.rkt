@@ -8,3 +8,8 @@
 (define test-omit-paths 'all)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define native-compiled-subpath '())
+(define native-compiled-bindir '("bin"))
+(define native-compiled-libdir '())
+(define native-compiled-release '())
+(define native-compiled-debug '("debug"))

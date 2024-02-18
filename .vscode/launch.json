@@ -19,42 +19,6 @@
                 "program": "${fileDirname}/compiled/native/bin/${fileBasenameNoExtension}.exe",
                 "type": "cppvsdbg"
             }
-        },
-
-        {
-            "name": "宇宙大爆炸",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/compiled/native/bin/BigBang",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "MIMode": "lldb",
-            "preLaunchTask": "宇宙大爆炸[Release]",
-
-            "windows": {
-                "program": "${workspaceFolder}/compiled/native/bin/BigBang.exe",
-                "type": "cppvsdbg"
-            }
-        },
-        
-        {
-            "name": "DBG宇宙大爆炸",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/compiled/native/debug/bin/BigBang",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "MIMode": "lldb",
-            "preLaunchTask": "宇宙大爆炸[Debug]",
-
-            "windows": {
-                "program": "${workspaceFolder}/compiled/native/debug/bin/BigBang.exe",
-                "type": "cppvsdbg"
-            }
         }
     ]
 }
