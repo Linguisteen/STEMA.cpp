@@ -1,11 +1,14 @@
 #include <iostream> /* C++ 标准输入输出头文件 */
 
-/**************************************************************************************************/
+/**
+ * 程序入口必须命名为 `main`
+ * @param argc, "argument count" 的缩写，即"参数个数"的意思
+ * @param argv, "argument vector" 的缩写, 即"参数数组"的意思，包含命令行的所有输入参数
+ */
 int main(int argc, char* argv[]) {
     std::string name; /* 字符串变量，姓名 */
     int coding_age;   /* 整数变量，已经学了多长时间编程 */
 
-    /*（注意，在 Windows 系统里，现在还不能输入输出中文名字) */
     std::cout << "请告诉我你的英文名字：";
     std::cin >> name;
 
@@ -16,5 +19,3 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
-
-
