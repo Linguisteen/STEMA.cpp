@@ -5,7 +5,7 @@
         "echo": true,
         "reveal": "always",
         "focus": true,
-        "panel": "dedicated",
+        "panel": "shared",
         "showReuseMessage": false,
         "clear": true
     },
@@ -14,11 +14,23 @@
         {
             "label": "一键编译",
             "detail": "构建当前活动文件",
+            "type": "process",
             "command": "raco",
-            "type": "cppbuild",
             "args": [ "wisemon", "-d", "cc", "${file}" ],
             "problemMatcher": [ "$gcc" ],
             "group": { "kind": "build", "isDefault": true },
+            "options": { "cwd": "${fileDirname}" },
+            "windows": { "problemMatcher": ["$msCompile"] }
+        },
+
+        {
+            "label": "一键调试",
+            "detail": "构建当前活动文件",
+            "type": "process",
+            "command": "raco",
+            "args": [ "wisemon", "-d", "cc-dbg", "${file}" ],
+            "problemMatcher": [ "$gcc" ],
+            "group": "build",
             "options": { "cwd": "${fileDirname}" },
             "windows": { "problemMatcher": ["$msCompile"] }
         }

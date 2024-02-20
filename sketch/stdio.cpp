@@ -6,8 +6,8 @@
  * @param argv, "argument vector" 的缩写, 即"参数数组"的意思，包含命令行的所有输入参数
  */
 int main(int argc, char* argv[]) {
-    std::string name; /* 字符串变量，姓名 */
-    int coding_age;   /* 整数变量，已经学了多长时间编程 */
+    std::string name; /* 字符串变量，被踢者的名字 */
+    int count;        /* 整数变量，花几块糖讲和 */
 
     /**
      * "<<" 和 ">>" 都是"流"操作符
@@ -17,13 +17,13 @@ int main(int argc, char* argv[]) {
      * std::endl 表示写入一个换行符。
      */
     
-    std::cout << "请告诉我你的英文名字：";
+    std::cout << "踢猫游戏" << std::endl;
+    std::cout << "请告诉我你想踢谁: ";
     std::cin >> name;
 
-    std::cout << "你好，" << name << "。你学编程几年啦？";
-    std::cin >> coding_age;
-    std::cout << "好棒，已经 " << coding_age << " 年了呀。";
-    std::cout << "那么请继续精益求精！" << std::endl;
+    std::cout << "好的。" << name << "刚被你踢了一脚，很气愤。你打算给他几块糖讲和？";
+    std::cin >> count;
+    std::cout << "哇，" << count << "块糖啊，你是讲诚意的，可以愉快地玩耍！" << std::endl;
 
     // 任务完成，C++ 心满意足地退出
     return 0;
