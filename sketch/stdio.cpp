@@ -18,12 +18,12 @@ int main(int argc, char* argv[]) {
      */
     
     std::cout << "踢猫游戏" << std::endl;
-    std::cout << "请告诉我你想踢谁: ";
+    std::cout << "喊出来你想踢谁: ";
     std::cin >> name;
 
-    std::cout << "好的。" << name << "刚被你踢了一脚，很气愤。你打算给他几块糖讲和？";
+    std::cout << name << "刚被你踢了一脚，很气愤。你打算花几块糖讲和？";
     std::cin >> count;
-    std::cout << "哇，" << count << "块糖啊，你是讲诚意的，可以愉快地玩耍！" << std::endl;
+    std::cout << "哇，" << count << "块糖啊，你是有诚意的，可以愉快地玩耍！" << std::endl;
 
     // 任务完成，C++ 心满意足地退出
     return 0;
