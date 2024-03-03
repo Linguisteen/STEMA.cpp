@@ -5,7 +5,7 @@ bool is_divisible(int z, int n) {
     return z % n == 0;
 }
 
-void print_datum(int z, int i, int M) {
+void print_datum(int z, int i) {
     if (i > 0) {
         std::cout << ",";
     }
@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
 
     for (int c = M; c <= N; c ++) {
         if (is_divisible(c, 7) && !is_divisible(c, 5)) {
-            print_datum(c, i, M);
+            print_datum(c, i);
             i += 1;
         }
     }
