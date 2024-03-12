@@ -13,3 +13,5 @@
 (define native-compiled-libdir '())
 (define native-compiled-release '())
 (define native-compiled-debug '("debug"))
+
+(define native-toolchain-names '(gcc msvc))
