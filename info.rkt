@@ -15,3 +15,4 @@
 (define native-compiled-debug '("debug"))
 
 (define native-toolchain-names '(gcc msvc))
+(define native-cpp-standard 2014)
