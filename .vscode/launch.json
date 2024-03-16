@@ -7,19 +7,28 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/compiled/native/bin/${fileBasenameNoExtension}",
-            "args": [],
+            "args": ["<", "${file}"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
-            "internalConsoleOptions": "openOnSessionStart",
+            "internalConsoleOptions": "neverOpen",
             "MIMode": "lldb",
-            "preLaunchTask": "一键编译",
-            "externalConsole": true,
+            "externalConsole": false,
             "avoidWindowsConsoleRedirection": true,
+            "preLaunchTask": "一键运行",
+
+            "logging": {
+                "exceptions": false,
+                "moduleLoad": false,
+                "trace": false,
+                "traceResponse": false,
+                "engineLogging": false,
+                "programOutput": true,
+                "natvisDiagnostics": false
+            },
 
             "windows": {
                 "program": "${fileDirname}/compiled/native/bin/${fileBasenameNoExtension}.exe",
-                "type": "cppvsdbg"
             }
         },
         
@@ -39,8 +48,7 @@
             "avoidWindowsConsoleRedirection": true,
 
             "windows": {
-                "program": "${fileDirname}/compiled/native/debug/bin/${fileBasenameNoExtension}.exe",
-                "type": "cppvsdbg"
+                "program": "${fileDirname}/compiled/native/debug/bin/${fileBasenameNoExtension}.exe"
             }
         }
     ]

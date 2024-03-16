@@ -12,6 +12,4 @@ int main(int argc, char* argv[]) {
     printf("s=3.14rr: %f\n",  s);
 
     return 0;
-
-
 }

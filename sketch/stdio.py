@@ -3,16 +3,18 @@
 import sys # 系统相关参数和函数
 
 ################################################################################
-def main(argc, argv):
-    var = input("喊出来你要踢谁：")
-    print(var + "刚刚被你踢了一脚，很气愤。", end = "")
-    var = int(input("你打算花几颗糖来讲和？"))
-    print("哇，{}粒糖啊！你是有诚意的，可以愉快的玩耍。".format(var))
+def main():
+    print("踢猫游戏")
+    name = input("喊出来你要踢谁：")
+    print(name + "刚刚被你踢了一脚，很气愤。", end = "")
+    count = int(input("你打算花几颗糖来讲和？"))
+
+    if count > 4:
+        print("哇，{}粒糖啊！你是有诚意的，可以愉快的玩耍。".format(count))
+    else:
+        print("我记住你了，你给我等着！")
 
     return 0
 
-
-
 ################################################################################
-if __name__ == "__main__":
-    sys.exit(main(len(sys.argv), sys.argv))
+main()

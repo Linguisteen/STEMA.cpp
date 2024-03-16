@@ -12,17 +12,16 @@
     
     "tasks": [
         {
-            "label": "一键编译",
-            "detail": "构建当前活动文件",
+            "label": "一键运行",
+            "detail": "运行当前活动文件(自动提取输入参数)",
             "type": "process",
             "command": "raco",
-            "args": [ "wisemon", "-d", "cc", "${file}" ],
+            "args": [ "nanomon", "-v", "exec", "${file}" ],
             "problemMatcher": [ "$gcc" ],
-            "group": { "kind": "build", "isDefault": true },
-            "options": { "cwd": "${fileDirname}" },
-            "windows": { "problemMatcher": ["$msCompile"] }
+            "group": "build",
+            "options": { "cwd": "${fileDirname}" }
         },
-
+        
         {
             "label": "一键调试",
             "detail": "构建当前活动文件",
@@ -31,8 +30,7 @@
             "args": [ "wisemon", "-d", "cc-dbg", "${file}" ],
             "problemMatcher": [ "$gcc" ],
             "group": "build",
-            "options": { "cwd": "${fileDirname}" },
-            "windows": { "problemMatcher": ["$msCompile"] }
+            "options": { "cwd": "${fileDirname}" }
         }
     ]
 }
