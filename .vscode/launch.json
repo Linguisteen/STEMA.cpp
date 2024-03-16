@@ -7,7 +7,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/compiled/native/bin/${fileBasenameNoExtension}",
-            "args": ["<", "${file}"],
+            "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
@@ -29,6 +29,7 @@
 
             "windows": {
                 "program": "${fileDirname}/compiled/native/bin/${fileBasenameNoExtension}.exe",
+                "MIMode": "gdb"
             }
         },
         
@@ -48,7 +49,8 @@
             "avoidWindowsConsoleRedirection": true,
 
             "windows": {
-                "program": "${fileDirname}/compiled/native/debug/bin/${fileBasenameNoExtension}.exe"
+                "program": "${fileDirname}/compiled/native/debug/bin/${fileBasenameNoExtension}.exe",
+                "MIMode": "gdb"
             }
         }
     ]

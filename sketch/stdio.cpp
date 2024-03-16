@@ -1,3 +1,18 @@
+/**
+ * 踢猫游戏
+ * 
+ * @arg name 想踢的人的名字
+ * @arg count 讲和所需的糖
+ * 
+ * @test
+ * 混沌豹猫
+ * 2
+ * 
+ * @test
+ * 混沌 豹猫
+ * 40
+ **/
+
 #include <iostream> /* C++ 标准输入输出头文件 */
 
 /**
@@ -21,7 +36,7 @@ int main(int argc, char* argv[]) {
     std::cout << "喊出来你想踢谁: ";
     std::cin >> name;
 
-    std::cout << name << "刚被你踢了一脚，很气愤。你打算花几块糖讲和？";
+    std::cout << name << "刚被你踢了一脚，很气愤。你打算花几块糖讲和？" << std::endl;
     std::cin >> count;
     std::cout << "哇，" << count << "块糖啊，你是有诚意的，可以愉快地玩耍！" << std::endl;
 
