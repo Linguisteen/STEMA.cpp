@@ -3,7 +3,7 @@
     
     "configurations": [
         {
-            "name": "一键编译/运行 main 函数",
+            "name": "一键编译/运行/测试 main 函数",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/compiled/native/bin/${fileBasenameNoExtension}",
@@ -15,7 +15,7 @@
             "MIMode": "lldb",
             "externalConsole": false,
             "avoidWindowsConsoleRedirection": true,
-            "preLaunchTask": "一键运行",
+            "preLaunchTask": "测试驱动计算",
 
             "logging": {
                 "exceptions": false,
@@ -44,10 +44,10 @@
             "environment": [],
             "internalConsoleOptions": "openOnSessionStart",
             "MIMode": "lldb",
-            "preLaunchTask": "一键调试",
             "externalConsole": true,
             "avoidWindowsConsoleRedirection": true,
-
+            "preLaunchTask": "一键调试",
+            
             "windows": {
                 "program": "${fileDirname}/compiled/native/debug/bin/${fileBasenameNoExtension}.exe",
                 "MIMode": "gdb"
