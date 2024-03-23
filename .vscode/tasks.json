@@ -42,7 +42,7 @@
              */
 
             "command": "raco",
-            "args": [ "nanomon", "-v", "--pretend", "255", "exec", "${file}" ],
+            "args": [ "wizarmon", "-v", "--pretend", "255", "${file}" ],
             
             "problemMatcher": [ "$gcc" ],
             "group": "build",
