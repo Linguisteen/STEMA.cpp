@@ -42,7 +42,7 @@
              */
 
             "command": "raco",
-            "args": [ "wizarmon", "-v", "--pretend", "255", "${file}" ],
+            "args": [ "wizarmon", "-v", "--pretend", "255", "--timeout", "1000", "${file}" ],
             
             "problemMatcher": [ "$gcc" ],
             "group": "build",
