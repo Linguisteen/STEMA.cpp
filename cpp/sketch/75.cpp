@@ -1,24 +1,28 @@
-/**
+/** 倍数问题
+ * 
  * 分别输入两个正整数 M、N
  * 输出M到N之间（含 M、N）所有可被7整除，但不是5的倍数的数字，
  * 并以逗号分隔按顺序打印在一行。
  *
- * @arg 第一行为 M
- * @arg 第二行为 N (1 < M < N < 1000)
- * @result 输出 M 到 N 所有可被 7 整除，但不是 5 的倍数的数字，并以逗号分隔
+ * @arg 整数 M
+ * @arg 整数 N (1 < M < N < 1000)
+ * @result M 和 N 之间所有满足要求的数，并以逗号分隔
  * 
  * @test The Standard Example
  * input:
- * 100
- * 147
- * 
+ * 100 147
  * output:
  * 112,119,126,133,147
  * 
+ * @test
+ * input:
+ * 4 50
+ * output:
+ * 7,14,21,28,42,49
+ * 
  * @test Fault Tolerance
  * input:
- * 147
- * 100
+ * 147 100
  *
  **/
 
@@ -38,6 +42,7 @@ int main(int argc, char* argv[]) {
     // 定义变量
     int M;
     int N;
+    int count = 0;
 
     // 读取键盘输入
     std::cin >> M >> N;
@@ -46,7 +51,12 @@ int main(int argc, char* argv[]) {
     while (M <= N) {
         if (is_divisible(M, 7)) {
             if (!is_divisible(M, 5)) {
-                std::cout << M << ",";
+                if (count > 0) {
+                    std::cout << ",";
+                }
+
+                std::cout << M;
+                count = count + 1;
             }
         }
 
