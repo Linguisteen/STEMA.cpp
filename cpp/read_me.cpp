@@ -92,6 +92,7 @@
  *      1. 没有空行时默认所有内容均为输入
  *      2. 不建议学生省略 input 和 output
  *  7. 测试用例的输入参数和输出参数应当符合上述 @arg 和 @result 的说明
+ *  8. 可以通过 timeout 行指定测试用例的时间限制，单位毫秒
  * 
  * @test 这是题目给出的标准测试用例
  * input:
@@ -132,9 +133,13 @@
  *
  * @file stone/readme.ans
  * 
+ * @test 超时的测试用例。不小心写了个死循环！
+ * timeout: 100
+ * 4
+ * 
  * @test 懒惰又易错的测试用例。它省略了 input 和 output，但又企图只给 output，结果翻车了吧？
  * 
- * 4
+ * 5
  * 
  * @test 空测试用例算做“待测用例”，不计入失败的测试
  **/
@@ -164,7 +169,8 @@ int main(int argc, char* argv[]) {
     case 1: /* “沉默”咒术 */ std::cout << "哼, 战斗力只有5的渣渣!"; break;
     case 2: /* 有瑕疵的“沉默”咒术 */ std::cout << "\t"; break;
     case 3: /* 打断"沉默", 全异常解除 */ std::cout << "毁灭吧, 赶紧的, 累了!"; break;
-    case 4: std::cerr << "不规范的输出被当成了输入！此类错误无法通过测试发现，只好让程序自己报错了！";
+    case 4: /* 时间监狱 */ while (true) { z = z * z; }; break;
+    case 5: std::cerr << "不规范的输出被当成了输入！此类错误无法通过测试发现，只好让程序自己报错了！";
     default: status = type;
     }
 
