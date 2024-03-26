@@ -95,33 +95,24 @@
  *  8. 可以通过 timeout 行指定测试用例的时间限制, 单位毫秒
  * 
  * @test 这是题目给出的标准测试用例
- * input:
- * 0 4
- * output:
- * 4.0
+ * input:  0 4
+ * output: 4.0
  * 
  * @test 这是学生纸笔推演出的测试用例
- * input:
- * 0 -2
- * output:
- * -2.0
+ * input:  0 -2
+ * output: -2.0
  * 
  * @test 这个测试用例有多种输出可能(而且 input 和 output 交错出现了)
- * output:
- * -2.0
- * input:
- * 0 -2
- * output:
- * -2.00
+ * output: -2.0
+ * input:  0 -2
+ * output: -2.00
  * 
  * @test 这个测试用例有 output, 但是要求“不输出任何东西”
- * input:
- * 1
+ * input: 1
  * output:
  *
  * @test 话唠测试用例从不需要说明 output
- * input:
- * 2
+ * input: 2
  * 
  * @test 懒惰的测试用例会省略 input 和 output。你得去猜, 哎~, 就是玩!
  * 0 128
@@ -168,7 +159,7 @@ int main(int argc, char* argv[]) {
     case 0: /* 主测试, 整数转浮点数 */ printf("%.1f", float(z)); break;
     case 1: /* “沉默”咒术 */ std::cout << "哼, 战斗力只有5的渣渣!"; break;
     case 2: /* 打断"沉默", 全异常解除 */ std::cout << "毁灭吧, 赶紧的, 累了!"; break;
-    case 3: /* 时间监狱 */ while (true) { z = z * z; }; break;
+    case 3: /* 时间监狱 */ while (true); break;
     case 4: std::cerr << "不规范的输出被当成了输入！此类错误无法通过测试发现, 只好让程序自己报错了！";
     default: status = type;
     }

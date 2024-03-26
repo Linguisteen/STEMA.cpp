@@ -148,22 +148,22 @@ import sys;
 
 def main():
     ### 根据题目要求声明变量
-    type = 255    # 测试类型
-    z = 0         # 主测试数据
-    status = 0    # 程序状态
+    type = None   # 测试类型
+    z = None      # 主测试数据
+    status = 0
     
     ### 根据题目读取用户输入
     type = int(input())
 
     if type == 0: # 主测试, 整数转浮点数
-        z = int(input())
+        z = int(input()) # input() 不检查 EOF
         print(f"{float(z):.1f}")
     elif type == 1: # “沉默”咒术
         print("哼, 战斗力只有5的渣渣!")
     elif type == 2: # 打断"沉默", 全异常解除
         print("毁灭吧, 赶紧的, 累了!")
     elif type == 3: # 时间监狱
-        while True: z = z * z
+        while True: pass
     elif type == 4:
         print("不规范的输出被当成了输入！此类错误无法通过测试发现, 只好让程序自己报错了！", file = sys.stderr)
         status = type
@@ -175,5 +175,8 @@ def main():
 
 
 
+# __name__ 是一个特殊变量
+# 可用于提示是否从这行代码启动应用程序
+# 效果上相当于 C++ 程序的启动器，负责调用 main 函数
 if __name__ == "__main__":
     sys.exit(main())
